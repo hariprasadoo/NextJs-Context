@@ -1,7 +1,5 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import {Provider} from './context/books'; 
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +12,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <Provider>
+    <html lang="en" className="bg-black flex flex-col items-center justify-between">
+      <body>{children}</body>
     </html>
+    </Provider>
   )
 }
