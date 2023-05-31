@@ -26,4 +26,25 @@ declare global {
     children: React.ReactNode;
   }
 
+  interface IItems{
+    id: number;
+    label: string;
+    content: string;
+  };
+  interface AccordingItems {
+    items: Array<IItems>
+  }
+
+  interface IOptions { label: string; value: string; }
+  interface OptionsItems {
+    options: Array<IOptions>
+    onChange: (option: boolean | ((prevState: boolean) => boolean)) => void
+    value:{ label: string; value: string; } | null;
+  }
+  interface IPanel {
+    children: React.ReactNode;
+    className: ReactDOM
+    onClick: () => void
+
+  }
 }

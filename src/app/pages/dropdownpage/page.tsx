@@ -1,9 +1,8 @@
 "use client";
-import {useState} from 'react'
-import Button from './components/Button' 
-import Dropdown from './components/Dropdown';
+import {useState} from 'react' 
+import Dropdown from '../../components/Dropdown';
 
-export default function Home() {
+export default function DropdownPage() {
   const [selection, setSelection] = useState(null)
   const handleSelect = (option: any) =>{
     setSelection(option)
