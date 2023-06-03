@@ -16,7 +16,6 @@ export default function DropdownPage() {
   
   return (
     <main className="flex flex-col items-center justify-between">
-      <h1>home</h1>
       <Dropdown options={options} value={selection} onChange={handleSelect}/>
     </main>
   );

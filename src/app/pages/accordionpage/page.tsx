@@ -25,7 +25,6 @@ export default function AccordionPage() {
   
   return (
     <main className="flex flex-col items-center justify-between">
-      <h1>home</h1>
       <Accordion items={items}/>
 
     </main>

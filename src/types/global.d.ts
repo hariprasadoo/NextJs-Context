@@ -47,4 +47,12 @@ declare global {
     onClick: () => void
 
   }
+  interface ILink {
+    to: string | { path: string; params: { [key: string]: string } };
+    children: React.ReactNode;
+  }
+  interface IRout{
+    children: React.ReactNode;
+    path?: string | { path: string; params: { [key: string]: string } };
+  }
 }

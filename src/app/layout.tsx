@@ -1,5 +1,5 @@
 import './globals.css'
-import {Provider} from './context/books'; 
+import {NavigationProvider} from './context/nav'; 
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,10 +12,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Provider>
+    <NavigationProvider>
     <html lang="en" className="bg-black flex flex-col items-center justify-between">
-      <body>{children}</body>
+      <body>
+      {children}</body>
     </html>
-    </Provider>
+    </NavigationProvider>
   )
 }
